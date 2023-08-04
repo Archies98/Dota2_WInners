@@ -36,4 +36,10 @@ fs.readFile('./Files/data.json', 'utf8', (err, data) => {
 
     return a < b ? 1 : (a > b ? -1 : 0);
     });
+
+    fs.writeFile('./Files/winrate.json', JSON.stringify(winrate), {'flag':'w+'}, err => {
+      if(err){
+        console.error(err);
+      }
+    });
 });
